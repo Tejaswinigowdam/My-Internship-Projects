@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>personal portfolio website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65b989dc58.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h1 class="logo">Student Portfolio</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/user.jpg" alt="My Image">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Hi, I'm Tejaswini M, a Web Developer pursuing Computer Science and Engineering at Srinivas Institute of Technology Mangalore Valachil.
+                 I'm passionate about Web Design and love creating beautiful and functional Websites, with a focus on user experience and accessibility.
+                My goal is to become a font-end web developer at a leading tech company.  </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>web Developer</span><br>Designing web interfaces</li>
+                        <li><span>Communication</span><br>I can communicate well in English and Kannada</li>
+                        <li><span>UI/UX designer</span><br>Building user interface</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Podcost</span><br>Love to listen podcost</li>
+                        <li><span>Designing</span><br>Love to decorate my home and making creative things</li>
+                        <li><span>travelling</span><br>Travelling and Exploring Things</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025</span><br>CSE in Srinivas Institute of Technology Mangalore <br>CGPA:8.1</li>
+                        <li><span>2019-2021</span><br>PCMB in St Charles composite pu and degree collage<br>Percentage:84%</li>
+                        <li><span>2018-2019</span><br>10th in Eshwaramma high school Bhadravathi<br>Percentage:77%</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+</body>
+<html
